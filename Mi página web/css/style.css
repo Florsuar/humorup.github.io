@@ -1,0 +1,443 @@
+* { 
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+    background-color: #F08080 ;
+    font-family: 'Roboto', sans-serif;
+    color:  #f8f9f9;
+}
+
+footer{
+    background-color: #000000;
+    color: #f8f9f9;
+    padding: 2%;
+}
+
+header {
+    background-color: black;
+    color: #CD5C5C ; 
+}
+
+#Encabezado {
+  display: flex; /* Convierte el contenedor en un contenedor flex */
+  align-items: center; /* Alinea los elementos al centro en el eje transversal (vertical) */
+  justify-content: space-between; /* Distribuye espacio entre el logo y el menú */
+}
+
+#menu nav ul {
+  display: flex; /* Hace que el menú sea un contenedor flex */
+  gap: 15px; /* Espacio entre los elementos del menú */
+  
+  margin: 0; /* Remueve el margen predeterminado */
+  padding: 0.5; /* Remueve el padding predeterminado */
+  font-family: 'Roboto', sans-serif;
+  font-size: 150%;
+}
+
+#menu nav ul li {
+  display: inline; /* Mantiene los elementos del menú en una sola línea */
+}
+
+#logo_marca img {
+  height: auto;
+  width: 23%;
+}
+#menu ul { 
+  list-style-type: none; /*Esto es para sacarle las viÃ±etas*/
+  justify-content: space-between;
+  
+  /*Esto hace que sea mas facil clickear*/
+  color: rgb(204, 80, 80);
+  padding: .6em 1em;
+}
+
+ 
+ /*flex-box*/ /*aca es donde lo hace flexible a la pagina*/
+ #menu ul{
+     display: flex;
+     flex-wrap: wrap;/*lo que hace esto es que los elementos se pongan en una linea
+     si es que hay espacio sino se va a la linea siguiente*/
+     justify-content: space-around; /*alineacion de los elemntos*/
+ }
+ 
+ #menu li{
+     flex: 1 0 auto; /*Primer argumento:la primera es que el elemento crezca para ocupar el espacio disponible de lo que queda del contenedor
+    Segundo argumento: evita que el elemento no se encoja mucho si no hay espacio
+               */
+     text-align: center;
+     list-style: none; /* Elimina los puntos de la lista */
+     text-decoration: none;
+    padding: auto;
+    margin: 0.5px;
+ }
+
+ #menu li a {
+  text-decoration: none; 
+  font-weight: bold;
+  color: #fa2828 ;
+ }
+
+ #menu li a:focus {
+  outline: 2px dashed orange; /* Agrega un contorno visible */
+  color: orange; /* Cambia el color del texto */
+}
+
+#menu li a:hover{
+  /*es para cuando pasamos el mouse por arriba cambie de color la caja*/
+  outline: 2px dashed #fa8072 ; /* Agrega un contorno visible */
+  color: #fa8072 ; /* Cambia el color del texto */
+ }
+ 
+#menu li a:visited {
+  color: #e8ea69 ; /* Cambia el color del enlace visitado */
+}
+
+.fechas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    }
+
+
+ .fechas{
+    display: flex;
+    justify-content: center;
+ }
+
+
+ /*  Hoja de estilos de EVENTOS*/
+
+ /* Contenedor principal de la sección */
+.proximas-fechas {
+  display: flex; /* Activamos el modo flexbox */
+    gap: 3rem; /* Espacio entre los divs */
+    justify-content: center; /* Distribuir el espacio entre los elementos */
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .proximas-fechas h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  /* Contenedor de las fechas con Flexbox */
+  .fechas-container {
+    flex: 1 1 30%; /* Hace que los divs ocupen el 45% del ancho del contenedor */
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #fa8072 ;
+    line-height: 125%;
+  }
+  
+  /* Estilo para cada "tarjeta" de evento */
+  .fecha {
+    flex: 1 1 20%; /* Dos tarjetas por fila, se ajusta en pantallas más pequeñas */
+    background: #b9b0ae;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .fecha img {
+    width: 75%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .fecha h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .fecha p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .fecha a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .fecha a:hover {
+    background-color: #0056b3;
+  }
+
+  .proximas-fechas h2{
+    color:#fa8072;
+  }
+
+  /*Eventos INDIVIDUALES*/
+
+  /* Contenedor principal del section */
+.eventos {
+    display: flex; /* Activamos el modo flexbox */
+    gap: 2rem; /* Espacio entre los divs */
+    justify-content: space-between; /* Distribuir el espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los divs se acomoden si el tamaño de la pantalla es pequeño */
+    
+  }
+  
+  /* Estilo para cada div dentro de la sección */
+  .evento {
+    flex: 1 1 45%; /* Hace que los divs ocupen el 45% del ancho del contenedor */
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #fa8072 ;
+    line-height: 125%;
+
+    
+  }
+  
+  .evento img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .datos{
+    line-height: 150%;
+    color: #b9b0ae;
+  }
+  .evento h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffc6c6 ;
+    font-weight: bold;
+    
+  }
+   .fecha{
+    color:#f65815;
+    margin: 1%;
+   }
+  .evento p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-size: 115%;
+  }
+  
+  #novedades{
+  background-color: #b46855 ;
+  padding: 1%;
+  margin: 3%;
+  border: 2px solid #b46855; /* Define el grosor y color del borde */
+  border-radius: 15px; /* Redondea las esquinas */
+  padding: 20px; /* Agrega espacio interno */
+}
+
+  label{
+    margin: 2.5%;
+  }
+
+  
+p{margin: 2%;
+line-height: 1.5;}
+
+h1 {
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3%;
+   font-family: 'Sour Gummy', sans-serif;
+ font-size: 300%; 
+
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700
+
+.edu-au-vic-wa-nt-pre-<uniquifier> {
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+ 
+h2{
+  padding: 1%;
+ 
+  
+  font-family: 'Sour Gummy', sans-serif;
+  text-shadow: 20px 0px 7px black;
+  font-size: 200%;
+}
+
+#inicio{
+  background-color: #b46855 ;
+  padding: 1%;
+  margin: 3%;
+  border: 2px solid #b46855; /* Define el grosor y color del borde */
+  border-radius: 15px; /* Redondea las esquinas */
+  padding: 20px; /* Agrega espacio interno */
+}
+
+.galeria{
+  margin: 1%;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.reseñas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-height: 300px; /* Altura máxima para el contenedor */
+  overflow-y: scroll; /* Scroll cuando el contenido excede la altura */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.reseña {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #58d68d;
+}
+
+.reseña h4 {
+  margin: 0 0 5px;
+  font-size: 1.1em;
+}
+
+.reseña p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.formulario-contacto {
+  
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 8 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+fieldset {
+  margin: 1%;
+  padding: 1%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 90%;
+}
+
+button{
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 600px) {
+  .formulario-contacto {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 12px;
+  }
+}
+
+#cursostand{
+  background-color: #b46855 ;
+  
+  margin: 3%;
+  border: 2px solid #b46855; /* Define el grosor y color del borde */
+  border-radius: 15px; /* Redondea las esquinas */
+  padding: 20px; /* Agrega espacio interno */
+}
+#cursostand ul{
+  list-style-type: circle;
+  padding-left: 100px;/* Cambia a "circle", "disc" (por defecto), o "none" para quitar las viñetas */
+  font-size: 120%;  
+}
+
+h4{
+  color: #58d68d;
+  font-size: 150%;
+  font-family: 'Sour Gummy', sans-serif;
+  margin: 2%;
+}
+  b{
+    font-family: 'Sour Gummy', sans-serif;
+    color: #e8ea69;
+    font-size: 135%;
+}
+
+
+  #cursostand li {
+    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+    list-style-type: circle;
+}
+
+.videostand{
+  width: 30%; /* O un valor fijo como '500px' */
+  height: auto; /* Ajusta la altura proporcionalmente */
+  /* Puedes agregar un máximo para limitar el tamaño */
+}

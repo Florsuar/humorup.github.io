@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO - Stand Up | San Miguel </title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Archivo CSS opcional -->
+</head>
+
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <div id="Encabezado">
+            <div id="logo_marca">
+                <img src="../img/Logo1.png" alt="Stand-Up" class="mi_logo">
+            </div>
+
+            <div id="menu">
+                <nav >
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../pages/eventos.html">Shows</a></li>
+                        <li><a href="../pages/curso.html">Cursos</a></li>
+                        <li><a href="../pages/formulario.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Contenido principal -->
+    <main>
+       <h2>Contacto</h2>
+       <p> Para reservas, contrataciones o consultas completá el formulario y en breve me comunicaré con vos.</p>
+    <form
+        action="https://formspree.io/f/mdkozovn"
+        method="POST"      >
+            <div class="formulario-contacto">
+                
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" required>
+                  <br>
+            
+                  <label for="correo">Correo Electrónico:</label>
+                  <input type="email" id="correo" name="correo" required>
+                <br>
+
+                  <label for="mensaje">Mensaje:</label>
+                  <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <br>
+                  <input type="checkbox" name="condiciones" id="" required>
+        Acepto los terminos y condicones
+        <br><br>
+
+        <button type="submit">Enviar</button>
+                
+        
+        <br> 
+    </form>
+<br>
+</main>
+
+   <!-- Pie de página -->
+   <footer>
+        
+    <p>Redes sociales:
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <a href="https://www.instagram.com/humorup19" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+       
+        <a href="https://www.facebook.com/share/18KMnuFwhL/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        &ensp;|&ensp;
+        Contacto:
+        <i class="fa-brands fa-whatsapp" style="color: #ff944d;"></i>
+                <a href="https://wa.link/xqwopj">+549113167-1427</a>
+    </p>
+    <p>&copy; 2024 Humor UP Producciones. Todos los derechos reservados.</p>
+    <br>
+</footer>
+</body>
+
+</html>
